@@ -24,7 +24,10 @@ Gem::Specification.new do |spec|
 
   # grpc 1.65 has bug on request#to_h
   # https://github.com/grpc/grpc/issues/37774
-  spec.add_dependency 'grpc', '>= 1.12.0', '<= 1.64.0'
+  # spec.add_dependency 'grpc', '>= 1.12.0', '<= 1.64.0'
+
+  # allow grpc to be upgraded beyond 1.64.3
+  spec.add_dependency 'grpc', '>= 1.12.0'
 
   spec.add_development_dependency 'bundler'
   spec.add_development_dependency 'grpc-tools'
